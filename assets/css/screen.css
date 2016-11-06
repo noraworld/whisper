@@ -996,13 +996,12 @@ body.nav-opened .nav {
     max-width: 710px;
     margin: 0 auto;
     padding-bottom: 4rem;
-    border-bottom: #EBF2F6 1px solid;
     word-wrap: break-word;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
-.post:after {
+/*.post:after {
     display: block;
     content: "";
     width: 7px;
@@ -1015,7 +1014,7 @@ body.nav-opened .nav {
     background: #FFF;
     border-radius: 100%;
     box-shadow: #FFF 0 0 0 5px;
-}
+}*/
 
 body:not(.post-template) .post-title {
     font-size: 3.6rem;
@@ -1260,10 +1259,7 @@ body.page-template .post-title {
    to be flexible at smaller screen sizes while the share
    links remain at a fixed width the whole time */
 .post-footer .share {
-    position: absolute;
-    top: 3rem;
-    right: 0;
-    width: 140px;
+    text-align: right;
 }
 
 .post-footer .share a {
@@ -1422,18 +1418,6 @@ body.page-template .post-title {
    7. Read More - Next/Prev Post Links
    ========================================================================== */
 
-.read-next {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: stretch;
-    -webkit-align-items: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    margin-top: 10rem;
-}
-
 .read-next-story {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1448,9 +1432,11 @@ body.page-template .post-title {
     position: relative;
     text-align: center;
     color: #fff;
-    background: #222 no-repeat center center;
+    background: #fff no-repeat center center;
     background-size: cover;
     overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 .read-next-story:hover:before {
     background: rgba(0,0,0,0.8);
@@ -1475,12 +1461,15 @@ body.page-template .post-title {
 }
 
 .read-next-story .post {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
     padding-top: 6rem;
     padding-bottom: 6rem;
 }
 
 .read-next-story .post:before {
-    content: "Read This Next";
+    content: "Next Post →";
     padding: 4px 10px 5px;
     text-transform: uppercase;
     font-size: 1.1rem;
@@ -1491,7 +1480,7 @@ body.page-template .post-title {
     transition: all 0.5s ease;
 }
 .read-next-story.prev .post:before {
-    content: "You Might Enjoy";
+    content: "← Prev Post";
 }
 
 .read-next-story h2 {
@@ -1504,44 +1493,6 @@ body.page-template .post-title {
     color: rgba(255,255,255,0.8);
 }
 
-/* Special styles for posts with no cover images */
-.read-next-story.no-cover {
-    background: #f5f8fa;
-}
-
-.read-next-story.no-cover:before {
-    display: none;
-}
-
-.read-next-story.no-cover .post:before {
-    color: rgba(0,0,0,0.5);
-    border-color: rgba(0,0,0,0.2);
-}
-
-.read-next-story.no-cover h2 {
-    color: rgba(0,0,0,0.8);
-}
-
-.read-next-story.no-cover p {
-    color: rgba(0,0,0,0.5);
-}
-
-/* if there are two posts without covers, put a border between them */
-.read-next-story.no-cover + .read-next-story.no-cover {
-    border-left: rgba(0,0,100,0.04) 1px solid;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-/* Correctly position site-footer when next to the .read-next container */
-.read-next + .site-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
-}
 
 /* ==========================================================================
    8. Third Party Elements - Embeds from other services
