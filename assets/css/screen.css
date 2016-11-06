@@ -1772,6 +1772,11 @@ body.page-template .post-title {
    16. General - Another added general style
    ========================================================================== */
 
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
 .content {
     width: 600px;
     float: left;
