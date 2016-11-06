@@ -42,28 +42,34 @@
             </ul>
         </header>
 
-        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-        {{{body}}}
+        {{!-- container --}}
+        <div id="container" class="container clearfix">
 
-        {{!-- sidebar --}}
-        <div id="sidebar" class="sidebar">
-            <div class="sidebar-profile">
-                <h4>Profile</h4>
+            {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+            {{{body}}}
+
+            {{!-- sidebar --}}
+            <div id="sidebar" class="sidebar">
+                <div class="sidebar-profile">
+                    <h4>Profile</h4>
+                </div>
+                <div class="sidebar-categories">
+                    <h4>Categories</h4>
+                    <ul>
+                        {{!-- data.tags[].name of ghost.url.api() here --}}
+                    </ul>
+                </div>
+                <div class="sidebar-recent-posts">
+                    <h4>Recent Posts</h4>
+                    <ul>
+                        {{!-- data.posts[].name of ghost.url.api() here --}}
+                    </ul>
+                </div>
             </div>
-            <div class="sidebar-categories">
-                <h4>Categories</h4>
-                <ul>
-                    {{!-- data.tags[].name of ghost.url.api() here --}}
-                </ul>
-            </div>
-            <div class="sidebar-recent-posts">
-                <h4>Recent Posts</h4>
-                <ul>
-                    {{!-- data.posts[].name of ghost.url.api() here --}}
-                </ul>
-            </div>
+            {{!-- /sidebar --}}
+
         </div>
-        {{!-- /sidebar --}}
+        {{!-- /container --}}
 
         {{!-- The tiny footer at the very bottom --}}
         <footer class="site-footer clearfix">

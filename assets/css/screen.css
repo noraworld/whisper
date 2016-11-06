@@ -1751,6 +1751,24 @@ body.page-template .post-title {
 
 
 /* ==========================================================================
+   15. Sidebar
+   ========================================================================== */
+
+.sidebar {
+    position: relative;
+    width: 300px;
+    border-bottom: #ebf2f6 1px solid;
+    word-wrap: break-word;
+    float: right;
+    font-family: 'BlinkMacSystemFont';
+}
+
+.sidebar ul, .sidebar .sidebar-profile-bio {
+    padding-left: 10px;
+}
+
+
+/* ==========================================================================
    12. Media Queries - Smaller than 900px
    ========================================================================== */
 
