@@ -28,8 +28,8 @@
 
 html {
     font-family: 'Open Sans';
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+    /*-ms-text-size-adjust: 100%;*/
+    /*-webkit-text-size-adjust: 100%*/
 }
 body { margin: 0; }
 article, aside, details,
@@ -184,15 +184,11 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: "Open Sans", serif;
+    font-family: "Open Sans";
     letter-spacing: 0.01rem;
     font-size: 1.8rem;
     line-height: 1.75em;
     color: #3A4145;
-    -webkit-font-feature-settings: 'kern' 1;
-    -moz-font-feature-settings: 'kern' 1;
-    -o-font-feature-settings: 'kern' 1;
-    text-rendering: geometricPrecision;
 }
 
 ::-moz-selection {
@@ -209,7 +205,6 @@ h4, h5, h6 {
     line-height: 1.15em;
     margin: 0 0 0.4em 0;
     font-family: "Open Sans", sans-serif;
-    text-rendering: geometricPrecision;
 }
 
 h1 {
@@ -246,9 +241,6 @@ a:hover {
 }
 
 p, ul, ol, dl {
-    -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
-    -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
-    -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     margin: 0 0 1.75em 0;
     text-rendering: geometricPrecision;
 }
