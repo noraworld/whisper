@@ -2,6 +2,10 @@
 
 The customized theme for [Ghost](http://github.com/tryghost/ghost/).
 
+## Dependencies
+
+* /assets/js/sidebar.js includes author name
+
 ## Copyright & License
 
 Copyright (c) 2013-2016 Ghost Foundation - Released under the MIT License.

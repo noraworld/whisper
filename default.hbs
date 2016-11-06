@@ -45,6 +45,26 @@
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
 
+        {{!-- sidebar --}}
+        <div id="sidebar" class="sidebar">
+            <div class="sidebar-profile">
+                <h4>Profile</h4>
+            </div>
+            <div class="sidebar-categories">
+                <h4>Categories</h4>
+                <ul>
+                    {{!-- data.tags[].name of ghost.url.api() here --}}
+                </ul>
+            </div>
+            <div class="sidebar-recent-posts">
+                <h4>Recent Posts</h4>
+                <ul>
+                    {{!-- data.posts[].name of ghost.url.api() here --}}
+                </ul>
+            </div>
+        </div>
+        {{!-- /sidebar --}}
+
         {{!-- The tiny footer at the very bottom --}}
         <footer class="site-footer clearfix">
             <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
@@ -57,6 +77,8 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     {{!-- Ghost outputs important scripts and data with this tag --}}
     {{ghost_foot}}
+    {{!-- Get sidebar contents from Ghost APIs --}}
+    <script type="text/javascript" src="{{asset "js/sidebar.js"}}"></script>
     {{!-- Fitvids makes video embeds responsive and awesome --}}
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     {{!-- The main JavaScript file for Whisper --}}
