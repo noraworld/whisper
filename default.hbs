@@ -23,16 +23,15 @@
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
 </head>
-<body class="{{body_class}} nav-closed">
-
-    {{!-- The blog navigation links --}}
-    {{navigation}}
+<body>
 
     <div class="site-wrapper">
 
         <header class="main-header">
+
         {{#if @blog.logo}} <a class="blog-logo blog-logo-img" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a> {{/if}}
             <a class="blog-logo blog-logo-title" href="{{@blog.url}}">{{@blog.title}}</a>
+
             <ul class="header-navigation">
                 <li><a href="https://noraworld.jp">Home</a></li>
                 <li><a href="{{@blog.url}}">Blog</a></li>
