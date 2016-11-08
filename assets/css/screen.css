@@ -1861,6 +1861,14 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 5px;
 }
 
+.read-next-story.no-cover {
+    background-image: url(../img/read_next_story_no_cover.svg);
+}
+
+.read-next-story.prev.no-cover {
+    background-image: url(../img/read_next_story_prev_no_cover.svg);
+}
+
 .sidebar .sidebar-profile, .sidebar .sidebar-categories, .sidebar .sidebar-recent-posts, .post-image-smartphone {
     display: none;
 }
@@ -2012,10 +2020,10 @@ h1, h2, h3, h4, h5, h6 {
         display: none;
     }
 
-    .read-next-story.no-cover + .read-next-story.no-cover {
+/*    .read-next-story.no-cover + .read-next-story.no-cover {
         border-top: rgba(0,0,100,0.06) 1px solid;
         border-left: none;
-    }
+    }*/
 
 }
 
@@ -2324,7 +2332,17 @@ h1, h2, h3, h4, h5, h6 {
         float: none;
     }
 
-    .header-navigation {
+    .post-excerpt p {
+        margin-top: 20px;
+    }
+
+    .post-image-smartphone {
+        display: block;
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    .header-navigation, .post-image {
         display: none;
     }
 
