@@ -1,4 +1,4 @@
-if (!navigator.userAgent.match(/(iPhone|android)/)) {
+if (!navigator.userAgent.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/)) {
 
   $(window).scroll(function() {
 
