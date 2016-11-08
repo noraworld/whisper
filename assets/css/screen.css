@@ -193,7 +193,7 @@ td, th{ padding: 0; }
     -moz-osx-font-smoothing: grayscale;
 }
 
-.sns-search:before {
+.sns-qiita:before {
   content: "\e901";
 }
 .sns-twitter:before {
@@ -1563,9 +1563,9 @@ body.page-template .post-title {
     position: absolute;
     display: inline-block;
     padding: 0 15px;
-    border: #bfc8cd 1px solid;
+    border: #bfc8cd 2px solid;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 30px;
     transition: border 0.3s ease;
 }
 
@@ -1782,6 +1782,7 @@ body.page-template .post-title {
     float: right;
     padding: 0;
     margin: 0;
+    font-size: 18px;
 }
 
 .header-navigation li {
@@ -1802,15 +1803,15 @@ body.page-template .post-title {
 }
 
 .header-navigation li a .sns-instagram:hover {
-  color: #bb671a;
+  color: #eea555;
 }
 
 .header-navigation li a .sns-github:hover {
-  color: #484b56;
+  color: #848484;
 }
 
-.header-navigation li a .sns-search:hover {
-  color: #4fb500;
+.header-navigation li a .sns-qiita:hover {
+  color: #51ce22;
 }
 
 .post-title a {
