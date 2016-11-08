@@ -1505,6 +1505,7 @@ body.page-template .post-title {
 .read-next-story h2 {
     margin-top: 1rem;
     color: #fff;
+    font-size: 24px;
 }
 
 .read-next-story p {
@@ -1723,12 +1724,12 @@ body.page-template .post-title {
 .sidebar {
     position: relative;
     width: 300px;
-    border-bottom: #ebf2f6 1px solid;
+    /*border-bottom: #ebf2f6 1px solid;*/
     float: right;
     font-family: 'Open Sans';
 }
 
-.sidebar ul, .sidebar .sidebar-profile-bio {
+.sidebar ul {
     padding-left: 10px;
 }
 
@@ -1875,33 +1876,52 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url(../img/read_next_story_prev_no_cover.svg);
 }
 
-.sidebar .sidebar-profile, .sidebar .sidebar-categories, .sidebar .sidebar-recent-posts, .post-image-smartphone {
+.sidebar .sidebar-profile, .sidebar .sidebar-categories, .sidebar .sidebar-recent-posts, .post-image-smartphone, .hamburger {
     display: none;
 }
 
 
 /* ==========================================================================
-   12. Media Queries - Smaller than 900px
+   12. Media Queries - Smaller than 1100px
    ========================================================================== */
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
 
     blockquote {
         margin-left: 0;
     }
 
+    .container {
+        width: 90%;
+    }
+
+    .content {
+        width: 60%;
+    }
+
+    .sidebar {
+        width: 30%;
+        margin: 0 auto;
+    }
+
     .main-header {
+        margin: 50px auto;
+        padding: 0;
+        width: 90%;
+    }
+
+    /*.main-header {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         height: auto;
-        /*min-height: 240px;*/
-        /*height: 60vh;*/
+        min-height: 240px;
+        height: 60vh;
         padding: 15% 0;
-    }
+    }*/
 
-    .scroll-down,
-    .home-template .main-header:after { display: none; }
+    /*.scroll-down,
+    .home-template .main-header:after { display: none; }*/
 
     .paged .main-header {
         min-height: 180px;
@@ -1926,13 +1946,13 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.95em
     }
 
-    body:not(.post-template) .post-title {
+    /*body:not(.post-template) .post-title {
         font-size: 3.2rem;
     }
 
     body.page-template .post-title {
         font-size: 4.5rem;
-    }
+    }*/
 
     hr {
         margin: 2.4em 0;
@@ -1943,28 +1963,27 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     h1 {
-        font-size: 4.5rem;
-        text-indent: -2px;
+        font-size: 28px;
     }
 
     h2 {
-        font-size: 3.6rem;
+        font-size: 24px;
     }
 
     h3 {
-        font-size: 3.1rem;
+        font-size: 22px;
     }
 
     h4 {
-        font-size: 2.5rem;
+        font-size: 19px;
     }
 
     h5 {
-        font-size: 2.2rem;
+        font-size: 16px;
     }
 
     h6 {
-        font-size: 1.8rem;
+        font-size: 13px;
     }
 
     .author-profile {
@@ -2001,7 +2020,7 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0;
     }
 
-    .gh-subscribe {
+    /*.gh-subscribe {
         padding: 2rem;
     }
 
@@ -2011,7 +2030,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .gh-subscribe p {
         font-size: 1.4rem;
-    }
+    }*/
 
     .read-next {
         -webkit-box-orient: vertical;
@@ -2020,10 +2039,6 @@ h1, h2, h3, h4, h5, h6 {
         -ms-flex-direction: column;
         flex-direction: column;
         margin-top: 4rem;
-    }
-
-    .read-next p {
-        display: none;
     }
 
 /*    .read-next-story.no-cover + .read-next-story.no-cover {
@@ -2046,12 +2061,19 @@ h1, h2, h3, h4, h5, h6 {
 
     .content {
         width: 100%;
+        float: none;
     }
 
     .main-header {
         margin: 50px auto;
         padding: 0;
         width: 90%;
+    }
+
+    .sidebar {
+        width: 95%;
+        margin: 0 auto;
+        float: none;
     }
 
     .hamburger {
@@ -2242,10 +2264,10 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 1rem;
     }
 
-    .post-footer {
-        padding: 5rem 0 3rem 0;
-        text-align: center;
-    }
+    /*.post-footer {*/
+        /*padding: 5rem 0 3rem 0;*/
+        /*text-align: center;*/
+    /*}*/
 
     .post-footer .author {
         margin: 0 0 2rem 0;
@@ -2332,14 +2354,12 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
     }*/
 
-    .content {
-        float: none;
+    .read-next-story h2 {
+        font-weight: normal;
     }
 
-    .sidebar {
-        width: 95%;
-        margin: 0 auto;
-        float: none;
+    .read-next p {
+        display: none;
     }
 
     .post-excerpt p {
