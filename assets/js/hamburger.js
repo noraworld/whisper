@@ -1,3 +1,3 @@
-$('#hamburger-button').on('click', () => {
+$('#hamburger-button').on('click', function() {
   $('#hamburger-menu').toggle();
 });
