@@ -196,6 +196,9 @@ td, th{ padding: 0; }
 .sns-qiita:before {
   content: "\e901";
 }
+.sns-hamburger:before {
+  content: "\e9bd";
+}
 .sns-twitter:before {
   content: "\ea96";
 }
@@ -871,6 +874,7 @@ body.nav-opened .nav {
     border: none !important; /* Makes sure there is never a border */
     color: #a7ce52;
     font-weight: bold;
+    padding-left: 10px;
 }
 
 .blog-logo img {
@@ -1789,6 +1793,7 @@ body.page-template .post-title {
     padding: 0;
     margin: 0;
     font-size: 18px;
+    padding-right: 10px;
 }
 
 .header-navigation li {
@@ -1876,7 +1881,46 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url(../img/read_next_story_prev_no_cover.svg);
 }
 
-.sidebar .sidebar-profile, .sidebar .sidebar-categories, .sidebar .sidebar-recent-posts, .post-image-smartphone, .hamburger {
+.hamburger-button {
+    float: right;
+    margin: 0;
+    padding: 0 15px 0 0;
+    color: #37446d;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-size: 24px;
+}
+
+.hamburger-button:hover {
+    color: #37446d;
+    cursor: pointer;
+}
+
+.hamburger-menu {
+    margin: 80px auto 0 auto;
+    padding: 0;
+    list-style: none;
+    width: 95%;
+}
+
+.hamburger-menu li {
+    border-bottom: 1px solid #37446d;
+    padding: 0 0 3px 0;
+}
+
+.hamburger-menu li a {
+    display: block;
+    width: 100%;
+}
+
+.hamburger-menu li a, .hamburger-menu li a:hover {
+    color: #37446d;
+}
+
+.hamburger-menu li a span {
+    padding-left: 5px;
+}
+
+.sidebar .sidebar-profile, .sidebar .sidebar-categories, .sidebar .sidebar-recent-posts, .post-image-smartphone, .hamburger-button, .hamburger-menu {
     display: none;
 }
 
@@ -2080,12 +2124,6 @@ h1, h2, h3, h4, h5, h6 {
         float: none;
     }
 
-    .hamburger {
-        float: right;
-        margin: 0;
-        padding: 0;
-    }
-
     .post-image-smartphone {
         display: block;
         width: 60%;
@@ -2099,6 +2137,10 @@ h1, h2, h3, h4, h5, h6 {
 
     .header-navigation {
         display: none;
+    }
+
+    .hamburger-button {
+        display: block;
     }
 
     .post-excerpt p {

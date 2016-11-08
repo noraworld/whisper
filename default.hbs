@@ -41,8 +41,15 @@
                 <li><a href="http://qiita.com/noraworld" target="_blank"><i class="sns-qiita"></i></a></li>
             </ul>
 
-            {{!-- make later --}}
-            <ul class="sns-twitter hamburger">
+            <a class="sns-hamburger hamburger-button" id="hamburger-button"></a>
+            <ul class="hamburger-menu" id="hamburger-menu">
+                <li><a href="https://noraworld.jp"><span>Home</span></a></li>
+                <li><a href="{{@blog.url}}"><span>Blog</span></a></li>
+                <li><a href="https://diary.noraworld.jp"><span>Diary</span></a></li>
+                <li><a href="https://twitter.com/noraworld_jp" target="_blank"><span>Twitter</span></a></li>
+                <li><a href="https://www.instagram.com/noraworld_jp" target="_blank"><span>Instagram</span></a></li>
+                <li><a href="https://github.com/noraworld" target="_blank"><span>GitHub</span></a></li>
+                <li><a href="http://qiita.com/noraworld" target="_blank"><span>Qiita</span></a></li>
             </ul>
 
         </header>
@@ -91,6 +98,8 @@
     <script type="text/javascript" src="{{asset "js/sidebar.js"}}"></script>
     {{!-- Move post images every scrolling --}}
     <script type="text/javascript" src="{{asset "js/parallax.js"}}"></script>
+    {{!-- Tap to open menu and show sns links --}}
+    <script type="text/javascript" src="{{asset "js/hamburger.js"}}"></script>
     {{!-- Fitvids makes video embeds responsive and awesome --}}
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     {{!-- The main JavaScript file for Whisper --}}
