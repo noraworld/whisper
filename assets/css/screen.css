@@ -1762,6 +1762,12 @@ body.page-template .post-title {
     line-height: 140%;
 }
 
+.sidebar .sidebar-categories-list, .sidebar .sidebar-recent-posts-list {
+    font-size: 15px;
+    line-height: 160%;
+    margin: 15px 0;
+}
+
 
 /* ==========================================================================
    16. General - Another added general style
@@ -2054,6 +2060,10 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0;
     }
 
+    .blog-logo, .blog-logo:hover {
+        color: #2e2e2e;
+    }
+
     /*.no-cover.main-header {
         height: 30vh;
     }*/
@@ -2161,7 +2171,7 @@ h1, h2, h3, h4, h5, h6 {
 
     p, ul, ol, dl {
         font-size: 0.95em;
-        margin: 0 0 2.5rem 0;
+        margin: 1.5rem 0 2.5rem 0;
     }
 
     .page-title {
