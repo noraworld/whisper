@@ -1905,7 +1905,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .main-header {
-        margin: 50px auto;
+        margin: 80px auto;
         padding: 0;
         width: 90%;
     }
@@ -2050,10 +2050,10 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* ==========================================================================
-   13. Media Queries - Smaller than 500px
+   17. Media Queries - Smaller than 700px
    ========================================================================== */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
 
     .container {
         width: 90%;
@@ -2082,8 +2082,28 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0;
     }
 
-    .blog-logo, .blog-logo:hover {
-        color: #2e2e2e;
+    .post-image-smartphone {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+        border-radius: 4px;
+    }
+
+    .header-navigation, .post-image {
+        display: none;
+    }
+
+}
+
+
+/* ==========================================================================
+   13. Media Queries - Smaller than 500px
+   ========================================================================== */
+
+@media only screen and (max-width: 500px) {
+
+    .post-image-smartphone {
+        width: 100%;
     }
 
     /*.no-cover.main-header {
@@ -2364,16 +2384,6 @@ h1, h2, h3, h4, h5, h6 {
 
     .post-excerpt p {
         margin-top: 20px;
-    }
-
-    .post-image-smartphone {
-        display: block;
-        width: 100%;
-        border-radius: 4px;
-    }
-
-    .header-navigation, .post-image {
-        display: none;
     }
 
 }
