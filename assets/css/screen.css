@@ -105,19 +105,19 @@ td, th{ padding: 0; }
 
 /* Import the font file with the icons in it */
 @font-face {
-    font-family: "casper-icons";
-    src:url("../fonts/casper-icons.eot?v=1");
-    src:url("../fonts/casper-icons.eot?v=1#iefix") format("embedded-opentype"),
-        url("../fonts/casper-icons.woff?v=1") format("woff"),
-        url("../fonts/casper-icons.ttf?v=1") format("truetype"),
-        url("../fonts/casper-icons.svg?v=1#icons") format("svg");
+    font-family: "share-icons";
+    src:url("../fonts/share/share-icons.eot?v=1");
+    src:url("../fonts/share/share-icons.eot?v=1#iefix") format("embedded-opentype"),
+        url("../fonts/share/share-icons.woff?v=1") format("woff"),
+        url("../fonts/share/share-icons.ttf?v=1") format("truetype"),
+        url("../fonts/share/share-icons.svg?v=1#icons") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 
 /* Apply these base styles to all icons */
-[class^="icon-"]:before, [class*=" icon-"]:before {
-    font-family: "casper-icons", "Open Sans", sans-serif;
+[class^="share-"]:before, [class*=" share-"]:before {
+    font-family: "share-icons", "Open Sans", sans-serif;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -131,36 +131,36 @@ td, th{ padding: 0; }
 
 /* Each icon is created by inserting the correct character into the
    content of the :before pseudo element. Like a boss. */
-.icon-ghost:before {
+.share-ghost:before {
     content: "\f600";
 }
-.icon-feed:before {
+.share-feed:before {
     content: "\f601";
 }
-.icon-twitter:before {
+.share-twitter:before {
     content: "\f602";
     font-size: 1.1em;
 }
-.icon-google-plus:before {
+.share-google-plus:before {
     content: "\f603";
 }
-.icon-facebook:before {
+.share-facebook:before {
     content: "\f604";
 }
-.icon-arrow-left:before {
+.share-arrow-left:before {
     content: "\f605";
 }
-.icon-stats:before {
+.share-stats:before {
     content: "\f606";
 }
-.icon-location:before {
+.share-location:before {
     content: "\f607";
     margin-left: -3px; /* Tracking fix */
 }
-.icon-link:before {
+.share-link:before {
     content: "\f608";
 }
-.icon-menu:before {
+.share-menu:before {
     content: "\f609";
 }
 /*
@@ -168,6 +168,43 @@ td, th{ padding: 0; }
     the version number by 1 in the @font-face rule. `?v=1` becomes `?v=2`
     This forces browsers to download the new font file.
 */
+
+@font-face {
+  font-family: 'sns-icons';
+  src:  url('../fonts/sns/sns-icons.eot?o91i95');
+  src:  url('../fonts/sns/sns-icons.eot?o91i95#iefix') format('embedded-opentype'),
+    url('../fonts/sns/sns-icons.ttf?o91i95') format('truetype'),
+    url('../fonts/sns/sns-icons.woff?o91i95') format('woff'),
+    url('../fonts/sns/sns-icons.svg?o91i95#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="sns-"]:before, [class*=" sns-"]:before {
+    font-family: "sns-icons", "Open Sans", sans-serif;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-decoration: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sns-search:before {
+  content: "\e901";
+}
+.sns-twitter:before {
+  content: "\ea96";
+}
+.sns-github:before {
+  content: "\eab0";
+}
+.sns-instagram:before {
+  content: "\e900";
+}
 
 
 /* ==========================================================================
@@ -1252,13 +1289,13 @@ body.page-template .post-title {
     text-decoration: none;
 }
 
-.post-footer .share .icon-twitter:hover {
+.post-footer .share .share-twitter:hover {
     color: #55acee;
 }
-.post-footer .share .icon-facebook:hover {
+.post-footer .share .share-facebook:hover {
     color: #3b5998;
 }
-.post-footer .share .icon-google-plus:hover {
+.post-footer .share .share-google-plus:hover {
     color: #dd4b39;
 }
 
@@ -1756,8 +1793,24 @@ body.page-template .post-title {
     color: black;
 }
 
-.header-navigation li a:hover {
+.header-navigation li a span:hover {
     color: orange;
+}
+
+.header-navigation li a .sns-twitter:hover {
+  color: #55acee;
+}
+
+.header-navigation li a .sns-instagram:hover {
+  color: #bb671a;
+}
+
+.header-navigation li a .sns-github:hover {
+  color: #484b56;
+}
+
+.header-navigation li a .sns-search:hover {
+  color: #4fb500;
 }
 
 .post-title a {
