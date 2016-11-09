@@ -1,19 +1,18 @@
 {{#foreach posts}}
 <article class="{{post_class}}">
-    <header class="post-header">
-        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-    </header>
-    <footer class="post-meta">
-        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY/MM/DD"}}</time>
-        {{tags}}
-    </footer>
-    <section class="post-excerpt">
-        {{#if image}} <div class="post-image" style="background-image: url({{image}})"></div> {{/if}}
-        {{#if image}} <img class="post-image-smartphone" src="{{image}}"> {{/if}}
-        <p>{{excerpt characters="250"}} ... <a class="read-more" href="{{url}}">続きを読む</a></p>
-    </section>
+  <header class="post-header">
+    <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+  </header>
+  <footer class="post-meta">
+    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY/MM/DD"}}</time>
+    {{tags}}
+  </footer>
+  <section class="post-excerpt">
+    {{#if image}} <div class="post-image" style="background-image: url({{image}})"></div> {{/if}}
+    {{#if image}} <img class="post-image-smartphone" src="{{image}}"> {{/if}}
+    <p>{{excerpt characters="250"}} ... <a class="read-more" href="{{url}}">続きを読む</a></p>
+  </section>
 </article>
 {{/foreach}}
 
-{{!-- Previous/next page links - displayed on every page --}}
 {{pagination}}
