@@ -1548,9 +1548,9 @@ body.page-template .post-title {
 /* The main wrapper for our pagination links */
 .pagination {
     position: relative;
-    width: 80%;
-    max-width: 710px;
-    margin: 4rem auto;
+    /*width: 80%;*/
+    /*max-width: 710px;*/
+    margin: 0 auto 4rem;
     font-family: "Open Sans", sans-serif;
     font-size: 1.3rem;
     color: #9EABB3;
@@ -1565,7 +1565,7 @@ body.page-template .post-title {
 /* Push the previous/next links out to the left/right */
 .older-posts,
 .newer-posts {
-    position: absolute;
+    /*position: absolute;*/
     display: inline-block;
     padding: 0 15px;
     border: #bfc8cd 2px solid;
@@ -1574,19 +1574,19 @@ body.page-template .post-title {
     transition: border 0.3s ease;
 }
 
-.older-posts {
+/*.older-posts {
     right: 0;
-}
+}*/
 
 .page-number {
     display: inline-block;
-    padding: 2px 0;
+    padding: 2px 10px;
     min-width: 100px;
 }
 
-.newer-posts {
+/*.newer-posts {
     left: 0;
-}
+}*/
 
 .older-posts:hover,
 .newer-posts:hover {
@@ -1743,7 +1743,7 @@ body.page-template .post-title {
 }
 
 .sidebar ul li a {
-    color: #9eabb3;
+    color: #80898a;
 }
 
 .sidebar ul li a:hover {
@@ -1771,6 +1771,8 @@ body.page-template .post-title {
     font-size: 15px;
     line-height: 160%;
     margin: 15px 0;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #dcdfe0;
 }
 
 
