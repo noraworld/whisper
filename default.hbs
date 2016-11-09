@@ -1,87 +1,87 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        {{!-- Document Settings --}}
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        {{!-- Page Meta --}}
-        <title>{{meta_title}}</title>
-        <meta name="description" content="{{meta_description}}" />
-        {{!-- Mobile Meta --}}
-        <meta name="HandheldFriendly" content="True" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {{!-- Brand icon --}}
-        <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
-        {{!-- Styles'n'Scripts --}}
-        <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
-        {{!-- Ghost outputs important style and meta data with this tag --}}
-        {{ghost_head}}
-    </head>
-    <body>
-        <div class="site-wrapper">
-            <header class="main-header">
-                <a class="blog-logo blog-logo-title" href="{{@blog.url}}">{{@blog.title}}</a>
+<head>
+  {{!-- Document Settings --}}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  {{!-- Page Meta --}}
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}" />
+  {{!-- Mobile Meta --}}
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{!-- Brand icon --}}
+  <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+  {{!-- Styles'n'Scripts --}}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+  {{!-- Ghost outputs important style and meta data with this tag --}}
+  {{ghost_head}}
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="main-header">
+      <a class="blog-logo blog-logo-title" href="{{@blog.url}}">{{@blog.title}}</a>
 
-                <ul class="header-navigation">
-                    <li><a href="https://noraworld.jp"><span>Home</span></a></li>
-                    <li><a href="{{@blog.url}}"><span>Blog</span></a></li>
-                    <li><a href="https://diary.noraworld.jp"><span>Diary</span></a></li>
-                    <li><a class="twitter" href="https://twitter.com/noraworld_jp" target="_blank"><i class="sns-twitter"></i></a></li>
-                    <li><a class="instagram" href="https://www.instagram.com/noraworld_jp" target="_blank"><i class="sns-instagram"></i></a></li>
-                    <li><a class="github" href="https://github.com/noraworld" target="_blank"><i class="sns-github"></i></a></li>
-                    <li><a class="qiita" href="http://qiita.com/noraworld" target="_blank"><i class="sns-qiita"></i></a></li>
-                </ul>
+      <ul class="header-navigation">
+        <li><a href="https://noraworld.jp"><span>Home</span></a></li>
+        <li><a href="{{@blog.url}}"><span>Blog</span></a></li>
+        <li><a href="https://diary.noraworld.jp"><span>Diary</span></a></li>
+        <li><a class="twitter" href="https://twitter.com/noraworld_jp" target="_blank"><i class="sns-twitter"></i></a></li>
+        <li><a class="instagram" href="https://www.instagram.com/noraworld_jp" target="_blank"><i class="sns-instagram"></i></a></li>
+        <li><a class="github" href="https://github.com/noraworld" target="_blank"><i class="sns-github"></i></a></li>
+        <li><a class="qiita" href="http://qiita.com/noraworld" target="_blank"><i class="sns-qiita"></i></a></li>
+      </ul>
 
-                <a class="sns-hamburger hamburger-button" id="hamburger-button"></a>
-                <ul class="hamburger-menu" id="hamburger-menu">
-                    <li><a href="https://noraworld.jp"><span>Home</span></a></li>
-                    <li><a href="{{@blog.url}}"><span>Blog</span></a></li>
-                    <li><a href="https://diary.noraworld.jp"><span>Diary</span></a></li>
-                    <li><a href="https://twitter.com/noraworld_jp" target="_blank"><span>Twitter</span></a></li>
-                    <li><a href="https://www.instagram.com/noraworld_jp" target="_blank"><span>Instagram</span></a></li>
-                    <li><a href="https://github.com/noraworld" target="_blank"><span>GitHub</span></a></li>
-                    <li><a href="http://qiita.com/noraworld" target="_blank"><span>Qiita</span></a></li>
-                </ul>
-            </header>
+      <a class="sns-hamburger hamburger-button" id="hamburger-button"></a>
+      <ul class="hamburger-menu" id="hamburger-menu">
+        <li><a href="https://noraworld.jp"><span>Home</span></a></li>
+        <li><a href="{{@blog.url}}"><span>Blog</span></a></li>
+        <li><a href="https://diary.noraworld.jp"><span>Diary</span></a></li>
+        <li><a href="https://twitter.com/noraworld_jp" target="_blank"><span>Twitter</span></a></li>
+        <li><a href="https://www.instagram.com/noraworld_jp" target="_blank"><span>Instagram</span></a></li>
+        <li><a href="https://github.com/noraworld" target="_blank"><span>GitHub</span></a></li>
+        <li><a href="http://qiita.com/noraworld" target="_blank"><span>Qiita</span></a></li>
+      </ul>
+    </header>
 
-            <div id="container" class="container clearfix">
-                {{{body}}}
+    <div id="container" class="container clearfix">
+      {{{body}}}
 
-                <div id="sidebar" class="sidebar">
-                    <div class="sidebar-profile">
-                        <h4>Profile</h4>
-                        {{!-- Appended profile data from js/sidebar.js --}}
-                    </div>
-                    <div class="sidebar-categories">
-                        <h4>Categories</h4>
-                        <ul>{{!-- Appended tags data from js/sidebar.js --}}</ul>
-                    </div>
-                    <div class="sidebar-recent-posts">
-                        <h4>Recent Posts</h4>
-                        <ul>{{!-- Appended recent posts data from js/sidebar.js --}}</ul>
-                    </div>
-                </div>
-            </div>
-
-            <footer class="site-footer clearfix">
-                <section class="copyright">Copyright &copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>. All rights reserved.</section>
-            </footer>
+      <div id="sidebar" class="sidebar">
+        <div class="sidebar-profile">
+          <h4>Profile</h4>
+          {{!-- Appended profile data from js/sidebar.js --}}
         </div>
+        <div class="sidebar-categories">
+          <h4>Categories</h4>
+          <ul>{{!-- Appended tags data from js/sidebar.js --}}</ul>
+        </div>
+        <div class="sidebar-recent-posts">
+          <h4>Recent Posts</h4>
+          <ul>{{!-- Appended recent posts data from js/sidebar.js --}}</ul>
+        </div>
+      </div>
+    </div>
 
-        {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-        <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-        {{!-- Ghost outputs important scripts and data with this tag --}}
-        {{ghost_foot}}
-        {{!-- Get sidebar contents from Ghost APIs --}}
-        <script type="text/javascript" src="{{asset "js/sidebar.js"}}"></script>
-        {{!-- Move post images every scrolling --}}
-        <script type="text/javascript" src="{{asset "js/parallax.js"}}"></script>
-        {{!-- Tap to open menu and show sns links --}}
-        <script type="text/javascript" src="{{asset "js/hamburger.js"}}"></script>
-        {{!-- Fitvids makes video embeds responsive and awesome --}}
-        <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
-        {{!-- The main JavaScript file for Whisper --}}
-        <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-    </body>
+    <footer class="site-footer clearfix">
+      <section class="copyright">Copyright &copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>. All rights reserved.</section>
+    </footer>
+  </div>
+
+  {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  {{!-- Ghost outputs important scripts and data with this tag --}}
+  {{ghost_foot}}
+  {{!-- Get sidebar contents from Ghost APIs --}}
+  <script type="text/javascript" src="{{asset "js/sidebar.js"}}"></script>
+  {{!-- Move post images every scrolling --}}
+  <script type="text/javascript" src="{{asset "js/parallax.js"}}"></script>
+  {{!-- Tap to open menu and show sns links --}}
+  <script type="text/javascript" src="{{asset "js/hamburger.js"}}"></script>
+  {{!-- Fitvids makes video embeds responsive and awesome --}}
+  <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+  {{!-- The main JavaScript file for Whisper --}}
+  <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+</body>
 </html>
