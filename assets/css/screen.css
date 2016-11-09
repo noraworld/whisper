@@ -1807,24 +1807,24 @@ body.page-template .post-title {
     color: black;
 }
 
-.header-navigation li a span:hover {
+.header-navigation li a:hover {
     color: orange;
 }
 
-.header-navigation li a .sns-twitter:hover {
+.header-navigation li a[class="twitter"]:hover {
   color: #55acee;
 }
 
-.header-navigation li a .sns-instagram:hover {
-  color: #eea555;
+.header-navigation li a[class="instagram"]:hover {
+  color: #fd9018;
 }
 
-.header-navigation li a .sns-github:hover {
-  color: #848484;
+.header-navigation li a[class="github"]:hover {
+  color: #797979;
 }
 
-.header-navigation li a .sns-qiita:hover {
-  color: #51ce22;
+.header-navigation li a[class="qiita"]:hover {
+  color: #33bb00;
 }
 
 .post-title, .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
