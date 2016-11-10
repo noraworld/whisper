@@ -612,7 +612,7 @@ button {
   border: none !important; /* Makes sure there is never a border */
   color: #a7ce52;
   font-family: 'Open Sans Bold', Segoe UI, BlinkMacSystemFont, Hiragino Kaku Gothic ProN, "メイリオ", meiryo, sans-serif;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .blog-logo img {
@@ -889,7 +889,7 @@ just for the lolz and stylepoints. */
 
 .post-footer .share h4 {
   font-family: 'Open Sans Bold', Segoe UI, BlinkMacSystemFont, Hiragino Kaku Gothic ProN, "メイリオ", meiryo, sans-serif;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .post-footer .share .share-twitter:hover {
@@ -1092,7 +1092,7 @@ just for the lolz and stylepoints. */
   color: #3f2e2e;
   text-decoration: none;
   font-family: 'Open Sans Bold', Segoe UI, BlinkMacSystemFont, Hiragino Kaku Gothic ProN, "メイリオ", meiryo, sans-serif;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .site-footer a:hover {
@@ -1124,6 +1124,7 @@ just for the lolz and stylepoints. */
 
 .sidebar h4 {
   font-family: 'Open Sans Bold', Segoe UI, BlinkMacSystemFont, Hiragino Kaku Gothic ProN, "メイリオ", meiryo, sans-serif;
+  font-weight: normal;
 }
 
 .sidebar ul {
