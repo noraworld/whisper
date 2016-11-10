@@ -1033,13 +1033,14 @@ body.nav-opened .nav {
     position: relative;
     width: 100%;
     max-width: 710px;
-    margin: 0 auto;
+    margin: 0 auto 4rem;
     padding-bottom: 4rem;
+    border-bottom: 1px solid #EBF2F6;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
-/*.post:after {
+.post:after {
     display: block;
     content: "";
     width: 7px;
@@ -1052,7 +1053,7 @@ body.nav-opened .nav {
     background: #FFF;
     border-radius: 100%;
     box-shadow: #FFF 0 0 0 5px;
-}*/
+}
 
 /*body:not(.post-template) .post-title {
     font-size: 3.6rem;
@@ -1743,8 +1744,12 @@ body.page-template .post-title {
     font-family: 'Open Sans Regular', Segoe UI, BlinkMacSystemFont, Hiragino Kaku Gothic ProN, "メイリオ", meiryo, sans-serif;
 }
 
+.sidebar h4 {
+    font-family: 'Open Sans Bold', Segoe UI, BlinkMacSystemFont, Hiragino Kaku Gothic ProN, "メイリオ", meiryo, sans-serif;
+}
+
 .sidebar ul {
-    padding-left: 10px;
+    padding-left: 15px;
 }
 
 .sidebar ul li {
