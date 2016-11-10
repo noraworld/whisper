@@ -1,86 +1,161 @@
 <!DOCTYPE html>
 <html>
 <head>
-  {{!-- Document settings --}}
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  {{!-- Page meta --}}
-  <title>{{meta_title}}</title>
-  <meta name="description" content="{{meta_description}}" />
-  {{!-- Mobile meta --}}
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  {{!-- Brand icon --}}
-  <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
-  {{!-- Stylesheet --}}
-  <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
-  {{!-- Ghost outputs important style and meta data with this tag --}}
-  {{ghost_head}}
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{@blog.logo}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    {{! Font Awesome }}
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    {{! Google Analytics }}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-76987206-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+
 </head>
-<body>
-  <div class="site-wrapper">
-    <header class="main-header">
-      <a class="blog-logo blog-logo-title" href="{{@blog.url}}">{{@blog.title}}</a>
+<body class="{{body_class}} nav-closed">
 
-      <ul class="header-navigation">
-        <li><a href="https://noraworld.jp"><span>Home</span></a></li>
-        <li><a href="{{@blog.url}}"><span>Blog</span></a></li>
-        <li><a href="https://diary.noraworld.jp"><span>Diary</span></a></li>
-        <li><a class="twitter" href="https://twitter.com/noraworld_jp" target="_blank"><i class="sns-twitter"></i></a></li>
-        <li><a class="instagram" href="https://www.instagram.com/noraworld_jp" target="_blank"><i class="sns-instagram"></i></a></li>
-        <li><a class="github" href="https://github.com/noraworld" target="_blank"><i class="sns-github"></i></a></li>
-        <li><a class="qiita" href="http://qiita.com/noraworld" target="_blank"><i class="sns-qiita"></i></a></li>
-      </ul>
+    {{navigation}}
 
-      <a class="sns-hamburger hamburger-button" id="hamburger-button"></a>
-      <ul class="hamburger-menu" id="hamburger-menu">
-        <li><a href="https://noraworld.jp"><span>Home</span></a></li>
-        <li><a href="{{@blog.url}}"><span>Blog</span></a></li>
-        <li><a href="https://diary.noraworld.jp"><span>Diary</span></a></li>
-        <li><a href="https://twitter.com/noraworld_jp" target="_blank"><span>Twitter</span></a></li>
-        <li><a href="https://www.instagram.com/noraworld_jp" target="_blank"><span>Instagram</span></a></li>
-        <li><a href="https://github.com/noraworld" target="_blank"><span>GitHub</span></a></li>
-        <li><a href="http://qiita.com/noraworld" target="_blank"><span>Qiita</span></a></li>
-      </ul>
-    </header>
+    <div class="site-wrapper">
 
-    <div id="container" class="container clearfix">
-      {{{body}}}
+        {{! header }}
+        <header class="main-header">
 
-      <div id="sidebar" class="sidebar">
-        <div class="sidebar-profile">
-          <h4>Profile</h4>
-          {{!-- Appended profile data from js/sidebar.js --}}
+<nav class="main-nav overlay clearfix">
+    {{#if @blog.navigation}}
+        <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+    {{/if}} 
+</nav>
+
+            {{#if @blog.logo}} <a class="blog-logo blog-logo-img" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a> {{/if}}
+            <a class="blog-logo blog-logo-title" href="{{@blog.url}}">{{@blog.title}}</a>
+
+            <ul class="header-navigation">
+                <li><a href="https://noraworld.jp">Home</a></li>
+                <li><a href="{{@blog.url}}">Blog</a></li>
+                <li><a href="https://diary.noraworld.jp">Diary</a></li>
+                <li><a href="https://twitter.com/noraworlds" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/noraworlds" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://github.com/noraworld" target="_blank"><i class="fa fa-github"></i></a></li>
+                <li><a href="http://qiita.com/noraworld" target="_blank"><i class="fa fa-code"></i></a></li>
+            <ul>
+
+        </header>
+
+        {{! Everything else gets inserted here }}
+        {{! content }}
+        <div id="container" class="container clearfix">
+
+            {{{body}}}
+
+            {{! sidebar }}
+            <div id="sidebar" class="sidebar">
+                <div class="sidebar-profile">
+                    <h4>Profile</h4>
+                </div>
+                <div class="sidebar-categories">
+                    <h4>Categories</h4>
+                    <ul>
+                        {{! data.tags[].name of ghost.url.api() here }}
+                    </ul>
+                </div>
+                <div class="sidebar-recent-posts">
+                    <h4>Recent Posts</h4>
+                    <ul>
+                        {{! data.posts[].name of ghost.url.api() here }}
+                    </ul>
+                </div>
+                <div class="twitter-widget">
+                    <h4>Twitter</h4>
+                    <a class="twitter-timeline" href="https://twitter.com/noraworlds" data-widget-id="728478600345722880">@noraworldsさんのツイート</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+            </div>
+            {{! /sidebar }}
+
         </div>
-        <div class="sidebar-categories">
-          <h4>Categories</h4>
-          <ul>{{!-- Appended tags data from js/sidebar.js --}}</ul>
-        </div>
-        <div class="sidebar-recent-posts">
-          <h4>Recent Posts</h4>
-          <ul>{{!-- Appended recent posts data from js/sidebar.js --}}</ul>
-        </div>
-      </div>
+        {{! /content }}
+
+        {{! footer }}
+        <footer class="site-footer clearfix">
+            <section class="copyright">Copyright &copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>. All rights reserved.</section>
+        </footer>
+
     </div>
 
-    <footer class="site-footer clearfix">
-      <section class="copyright">Copyright &copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>. All rights reserved.</section>
-    </footer>
-  </div>
+    <div class="scroll-top">
+        <i class="fa fa-arrow-up fa-3x"></i>
+    </div>
 
-  {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-  <script type="text/javascript" src="{{asset "js/jquery.js"}}"></script>
-  {{!-- Ghost outputs important scripts and data with this tag --}}
-  {{ghost_foot}}
-  {{!-- Get sidebar contents from Ghost APIs --}}
-  <script type="text/javascript" src="{{asset "js/sidebar.js"}}"></script>
-  {{!-- Move post images every scrolling --}}
-  <script type="text/javascript" src="{{asset "js/parallax.js"}}"></script>
-  {{!-- Tap to open menu and show sns links --}}
-  <script type="text/javascript" src="{{asset "js/hamburger.js"}}"></script>
-  {{!-- Fitvids makes video embeds responsive and awesome --}}
-  <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
-  {{!-- The main JavaScript file for Whisper --}}
-  <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    <script type="text/javascript">
+    //if (!navigator.userAgent.match(/(iPhone|android)/)) {
+
+    // Profile
+    $.get(ghost.url.api('users/slug/nora')).done(function(data) {
+        $('.sidebar .sidebar-profile').append('<img class="sidebar-profile-image" src="' + data.users[0].image + '" alt="' + data.users[0].name + '">');
+        $('.sidebar .sidebar-profile').append('<h5 class="sidebar-profile-name">' + data.users[0].name + '</h5>');
+        $('.sidebar .sidebar-profile').append('<p class="sidebar-profile-bio">' + data.users[0].bio + '</p>');
+        $('.sidebar .sidebar-profile').fadeIn(1000);
+    }).fail(function(err) {
+        console.log(err);
+    });
+
+    // Categories
+    $.get(ghost.url.api('tags')).done(function(data) {
+        for (var i = 0; i < data.tags.length; i++) {
+            $('.sidebar .sidebar-categories ul').append('<li class="sidebar-categories-list"><a href="/tag/' + data.tags[i].slug + '" alt="' + data.tags[i].name + '">' + data.tags[i].name + '</a></li>');
+            $('.nav ul').append('<li class="nav-' + data.tags[i].slug + '"><a href="/tag/' + data.tags[i].slug + '" alt="' + data.tags[i].name + '">' + data.tags[i].name + '</a></li>');
+        }
+        $('.sidebar .sidebar-categories').fadeIn(1000);
+    }).fail(function(err) {
+        console.log(err);
+    });
+
+    // Recent Posts
+    $.get(ghost.url.api('posts', {limit: 15})).done(function(data) {
+        for (var i = 0; i < data.posts.length; i++) {
+            $('.sidebar .sidebar-recent-posts ul').append('<li class="sidebar-recent-posts-list"><a href="/' + data.posts[i].slug + '" alt="' + data.posts[i].title + '">' + data.posts[i].title + '</a></li>');
+        }
+        $('.sidebar .sidebar-recent-posts').fadeIn(1000);
+    }).fail(function(err) {
+        console.log(err);
+    });
+
+    //}
+    </script>
+
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    {{! The main JavaScript file for Casper }}
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+
 </body>
 </html>

@@ -1,10 +1,8 @@
-# Whisper
+# Casper
 
-The customized theme for [Ghost](http://github.com/tryghost/ghost/).
+The default theme for [Ghost](http://github.com/tryghost/ghost/).
 
-## Dependencies
-
-* /assets/js/sidebar.js includes author name
+To download, visit the [releases](https://github.com/TryGhost/Casper/releases) page.
 
 ## Copyright & License
 

@@ -1,5 +1,25 @@
 {{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
+{{! If we have a tag cover, display that - else blog cover - else nothing }}
+<header class="breadcrumb">
+    <ul class="header-breadcrumb">
+        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://noraworld.jp" itemprop="url"><span itemprop="title"><i class="fa fa-home"></i></span></a></li>
+        <li>&gt;</li>
+        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{@blog.url}}" itemprop="url"><span itemprop="title">Noraworld Blog</span></a></li>
+        <li>&gt;</li>
+        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span itemprop="title">{{tag.name}}</span></li>
+    </ul>
+</header>
+
+{{! The main content area on the homepage }}
 <main class="content" role="main">
-  {{> "loop"}}
+
+    <!-- <div class="tag-navigation">
+        <i class="fa fa-tag fa-2x"></i> {{tag.name}}
+    </div> -->
+
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "loop"}}
+
 </main>

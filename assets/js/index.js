@@ -1,5 +1,5 @@
 /**
- * Main JS file for Whisper behaviours
+ * Main JS file for Casper behaviours
  */
 
 /* globals jQuery, document */
@@ -14,6 +14,11 @@
         $postContent.fitVids();
 
         $(".scroll-down").arctic_scroll();
+
+        $(".menu-button, .nav-cover, .nav-close").on("click", function(e){
+            e.preventDefault();
+            $("body").toggleClass("nav-opened nav-closed");
+        });
 
     });
 
@@ -48,4 +53,31 @@
         });
 
     };
+
+    // Customize options here
+
+    // Change Twitter link (nora20120808 -> noraworlds)
+    //var oldTwitterLinks = $('a[href^="https://twitter.com/nora20120808"]');
+    //for (var i = 0; i < oldTwitterLinks.length; i++) {
+    //    oldTwitterLinks.eq(i).attr('href', 'https://twitter.com/noraworlds');
+    //    oldTwitterLinks.eq(i).text('@noraworlds');
+    //}
+
+    // Add button to scroll to top
+    if (!navigator.userAgent.match(/(iPhone|android)/)) {
+        $('.scroll-top').hide();
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 800) {
+                $('.scroll-top').fadeIn();
+            } else {
+                $('.scroll-top').fadeOut();
+            }
+        });
+        $('.scroll-top').on('click', function() {
+            $('html body').animate({
+                scrollTop: 0
+            }, 500);
+        });
+    }
+
 })(jQuery);

@@ -1,58 +1,34 @@
-<!doctype html>
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if (gte IE 9)| IEMobile |!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-  <head>
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
-    <title>404 — Page not found</title>
+{{! The big featured header }}
 
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+{{! Everything inside the #author tags pulls data from the author }}
+{{#author}}
 
-    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
-    <meta http-equiv="cleartype" content="on">
+    <header class="breadcrumb">
+        <ul class="header-breadcrumb">
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://noraworld.jp" itemprop="url"><span itemprop="title"><i class="fa fa-home"></i></span></a></li>
+            <li>&gt;</li>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{@blog.url}}" itemprop="url"><span itemprop="title">Noraworld Blog</span></a></li>
+            <li>&gt;</li>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span itemprop="title">About</span></li>
+        </ul>
+    </header>
 
-    <link rel="stylesheet" href="{{asset "ghost.css" ghost="true" minifyInProduction="true"}}" />
-  </head>
-  <body>
-    <main role="main" id="main">
-      <div class="gh-app">
-          <div class="gh-viewport">
-              <div class="gh-view">
-                <section class="error-content error-404 js-error-container">
-                  <section class="error-details">
-                    <img
-                    class="error-ghost"
-                    src="{{asset "img/404-ghost@2x.png" ghost="true"}}"
-                    srcset="{{asset "img/404-ghost.png" ghost="true"}} 1x, {{asset "img/404-ghost@2x.png" ghost="true"}} 2x"/>
-                    <section class="error-message">
-                      <h1 class="error-code">404</h1>
-                      <h2 class="error-description">Page not found</h2>
-                      <a class="error-link" href="{{@blog.url}}">Go to the front page →</a>
-                    </section>
-                  </section>
-                </section>
-                {{#if stack}}
-                  <section class="error-stack">
-                    <h3>Stack Trace</h3>
-                    <p><strong>{{message}}</strong></p>
-                    <ul class="error-stack-list">
-                      {{#each stack}}
-                        <li>
-                          at
-                          {{#if function}}<em class="error-stack-function">{{function}}</em>{{/if}}
-                          <span class="error-stack-file">({{at}})</span>
-                        </li>
-                      {{/each}}
-                    </ul>
-                  </section>
-                {{/if}}
-              </div>
-          </div>
-      </div>
-    </main>
-  </body>
-</html>
+    <section class="author-profile inner">
+        {{#if image}}
+        <figure class="author-image">
+            <div class="img" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></div>
+        </figure>
+        {{/if}}
+        <h1 class="author-title">{{name}}</h1>
+        {{#if bio}}
+            <h2 class="author-bio">{{bio}}</h2>
+        {{/if}}
+        <div class="author-meta">
+            {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
+            {{#if website}}<a href="{{website}}" target="_blank"><span class="author-link icon-link">noraworld</span></a>{{/if}}
+        </div>
+    </section>
+{{/author}}

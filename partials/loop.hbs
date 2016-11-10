@@ -1,18 +1,50 @@
+{{! Previous/next page links - only displayed on page 2+ }}
+<div class="extra-pagination inner">
+    {{! above pagination }}
+    {{! pagination}}
+</div>
+
+{{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
-<article class="{{post_class}} loop-post">
-  <header class="post-header">
-    <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-  </header>
-  <footer class="post-meta">
-    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY/MM/DD"}}</time>
-    {{tags}}
-  </footer>
-  <section class="post-excerpt">
-    {{#if image}} <div class="post-image" style="background-image: url({{image}})"></div> {{/if}}
-    {{#if image}} <img class="post-image-smartphone" src="{{image}}"> {{/if}}
-    <p>{{excerpt characters="250"}} ... <a class="read-more" href="{{url}}">続きを読む</a></p>
-  </section>
+<article class="{{post_class}}">
+    <header class="post-header">
+        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+    </header>
+    <footer class="post-meta">
+        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY/MM/DD"}}</time>
+        {{tags}}
+    </footer>
+    <section class="post-excerpt">
+        {{#if image}} <div class="post-image" style="background-image: url({{image}})"></div> {{/if}}
+        {{#if image}} <img class="post-image-smartphone" src="{{image}}"> {{/if}}
+        <p>{{excerpt characters="250"}} ... <a class="read-more" href="{{url}}">続きを読む</a></p>
+    </section>
 </article>
 {{/foreach}}
 
+{{! Previous/next page links - displayed on every page }}
+{{! below pagination }}
 {{pagination}}
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>
+if (!navigator.userAgent.match(/(iPhone|android)/)) {
+    $(window).scroll(function() {
+        if ($(window).width() > 500) {
+
+            var postImageNumber = $('.post-image').length;
+            for (var i = 0; i < postImageNumber; i++) {
+                // 画像のスクロールを開始/終了するタイミングを遅く/早くしたいときに scrollOffset の値を大きくする
+                var scrollOffset = 150;
+                var scrollPositionSet = $(window).height() - $('.post-image').eq(i).height() - 2 * scrollOffset;
+                var scrollPosition = 100 - ($('.post-image').eq(i).offset().top - $(this).scrollTop() - scrollOffset) / scrollPositionSet * 100;
+
+                if (scrollPosition > 0 && scrollPosition < 100) {
+                    $('.post-image').eq(i).css('background-position-y', scrollPosition + '%');
+                }
+            }
+
+        }
+    });
+}
+</script>

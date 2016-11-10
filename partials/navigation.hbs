@@ -1,0 +1,20 @@
+<div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        {{! Automatically added from Navigation on Ghost Admin }}
+        {{#foreach navigation}}
+            <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+        {{/foreach}}
+    </ul>
+    <div class="sns-navigation">
+        <a href="https://twitter.com/noraworlds" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/noraworlds" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://github.com/noraworld" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="http://qiita.com/noraworld" target="_blank"><i class="fa fa-code"></i></a>
+        <!-- <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a> -->
+    </div>
+</div>
+<span class="nav-cover"></span>

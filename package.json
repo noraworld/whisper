@@ -1,33 +1,4 @@
 {
-    "name": "whisper",
-    "description": "A generic blog theme",
-    "version": "0.1",
-    "engines": {
-        "ghost": ">=0.9.0 <1.0.0"
-    },
-    "license": "MIT",
-    "screenshots": {
-        "desktop": "assets/screenshot-desktop.jpg",
-        "mobile": "assets/screenshot-mobile.jpg"
-    },
-    "author": {
-        "name": "noraworld"
-    },
-    "gpm": {
-        "type": "theme",
-        "categories": [
-            "Minimal",
-            "Personal Blogs"
-        ]
-    },
-    "keywords": [
-        "ghost",
-        "theme"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/noraworld/whisper.git"
-    },
-    "bugs": "https://github.com/noraworld/whisper/issues",
-    "contributors": "https://github.com/noraworld/whisper/graphs/contributors"
+  "name": "Wyoming",
+  "version": "1.0"
 }
