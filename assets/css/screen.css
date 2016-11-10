@@ -2180,6 +2180,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @media only screen and (max-width: 500px) {
 
+    .content {
+      padding-bottom: 3rem;
+    }
+
     .post-image-smartphone {
         width: 100%;
     }
