@@ -465,6 +465,10 @@ iframe, .fluid-width-video-wrapper {
   margin: 1.75em 0;
 }
 
+iframe[title="Disqus"] {
+  margin: 0;
+}
+
 /* When a video is inside the fitvids wrapper, drop the
 margin on the iframe, cause it breaks stuff. */
 .fluid-width-video-wrapper iframe {
@@ -929,7 +933,7 @@ just for the lolz and stylepoints. */
   background: #fff no-repeat center center;
   background-size: cover;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   border-radius: 5px;
 }
 .read-next-story:hover:before {
