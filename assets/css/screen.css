@@ -1034,13 +1034,16 @@ body.nav-opened .nav {
     width: 100%;
     max-width: 710px;
     margin: 0 auto 4rem;
-    padding-bottom: 4rem;
-    border-bottom: 1px solid #EBF2F6;
+}
+
+.loop-post {
+  border-bottom: 1px solid #EBF2F6;
+  padding-bottom: 4rem;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
-.post:after {
+.loop-post:after {
     display: block;
     content: "";
     width: 7px;
@@ -1240,7 +1243,6 @@ body.page-template .post-title {
 /* The author credit area after the post */
 .post-footer {
     position: relative;
-    margin: 6rem 0 0 0;
     padding: 3rem 0 0 0;
     border-top: #EBF2F6 1px solid;
 }
@@ -1302,6 +1304,11 @@ body.page-template .post-title {
     margin: 1rem 1.6rem 1.6rem 0;
     color: #BBC7CC;
     text-decoration: none;
+}
+
+.post-footer .share h4 {
+  font-family: 'Open Sans Bold', Segoe UI, BlinkMacSystemFont, Hiragino Kaku Gothic ProN, "メイリオ", meiryo, sans-serif;
+  font-weight: bold;
 }
 
 .post-footer .share .share-twitter:hover {
