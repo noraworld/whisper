@@ -1713,6 +1713,7 @@ body.page-template .post-title {
 .site-footer a {
     color: #3f2e2e;
     text-decoration: none;
+    font-family: 'Open Sans Bold', Segoe UI, BlinkMacSystemFont, Hiragino Kaku Gothic ProN, "メイリオ", meiryo, sans-serif;
     font-weight: bold;
 }
 
