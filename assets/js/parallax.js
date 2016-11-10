@@ -10,7 +10,7 @@ if (!navigator.userAgent.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobi
         var scrollPosition = 100 - ($('.post-image').eq(i).offset().top - $(this).scrollTop() - scrollOffset) / scrollPositionSet * 100;
 
         if (scrollPosition > 0 && scrollPosition < 100) {
-          $('.post-image').eq(i).css('background-position-y', scrollPosition + '%');
+          $('.post-image').eq(i).css('background-position', '50% ' + scrollPosition + '%');
         }
       }
     }
