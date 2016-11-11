@@ -10,14 +10,14 @@
     3.  Utilities
     4.  General
     5.  Single Post
-    6.  Author Profile
-    7.  Read More
-    8.  Third Party Elements
-    9.  Pagination
-    10. Subscribe
-    11. Footer
-    12. Media Queries (Tablet)
-    13. Media Queries (Mobile)
+    6.  Read More
+    7.  Pagination
+    8.  Footer
+    9.  Sidebar
+    10. General
+    11. Media Queries (1100px)
+    12. Media Queries ( 700px)
+    13. Media Queries ( 500px)
     14. Animations
 
 */
@@ -908,12 +908,7 @@ just for the lolz and stylepoints. */
 
 
 /* =============================================================================
-   6. Author profile
-============================================================================= */
-
-
-/* =============================================================================
-   7. Read More - Next/Prev Post Links
+   6. Read More - Next/Prev Post Links
 ============================================================================= */
 
 .read-next-story {
@@ -994,12 +989,7 @@ just for the lolz and stylepoints. */
 
 
 /* =============================================================================
-   8. Third Party Elements - Embeds from other services
-============================================================================= */
-
-
-/* =============================================================================
-   9. Pagination - Tools to let you flick between pages
+   7. Pagination - Tools to let you flick between pages
 ============================================================================= */
 
 /* The main wrapper for our pagination links */
@@ -1074,12 +1064,7 @@ just for the lolz and stylepoints. */
 
 
 /* =============================================================================
-   10. Subscribe - Generate those email subscribers
-============================================================================= */
-
-
-/* =============================================================================
-   11. Footer - The bottom of every page
+   8. Footer - The bottom of every page
 ============================================================================= */
 
 .site-footer {
@@ -1116,7 +1101,7 @@ just for the lolz and stylepoints. */
 
 
 /* =============================================================================
-   15. Sidebar
+   9. Sidebar
 ============================================================================= */
 
 .sidebar {
@@ -1175,7 +1160,7 @@ just for the lolz and stylepoints. */
 
 
 /* =============================================================================
-   16. General - Another added general style
+   10. General - Another added general style
 ============================================================================= */
 
 .container {
@@ -1325,7 +1310,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* =============================================================================
-   12. Media Queries - Smaller than 1100px
+   11. Media Queries - Smaller than 1100px
 ============================================================================= */
 
 @media only screen and (max-width: 1100px) {
@@ -1459,7 +1444,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* =============================================================================
-   17. Media Queries - Smaller than 700px
+   12. Media Queries - Smaller than 700px
 ============================================================================= */
 
 @media only screen and (max-width: 700px) {
