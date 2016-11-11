@@ -48,7 +48,7 @@ If you want to use the [Google Analytics](https://analytics.google.com), see `de
 </script> --}}
 ```
 
-Replace `UA-XXXXXXXX-X` with your tracking code and comment out this script. If you don't need the Google Analytics, you can delete this script.
+Replace `UA-XXXXXXXX-X` with your tracking code and uncomment this script. If you don't need the Google Analytics, you can delete this script.
 
 ### Disqus
 The injected [Disqus](https://disqus.com) code is same as the Google Analytics. See `post.hbs` and check the part below.
@@ -69,7 +69,7 @@ The injected [Disqus](https://disqus.com) code is same as the Google Analytics. 
 </section> --}}
 ```
 
-Replace `example` with your Disqus forum shortname and comment out this script. If your don't use the Disqus, you can delete it.
+Replace `example` with your Disqus forum shortname and uncomment this script. If your don't use the Disqus, you can delete it.
 
 ### Ghost API
 This theme uses [Ghost API](https://api.ghost.org) for the sidebar. If you don't this, your profile is not shown. See `assets/js/sidebar.js` and find the part below.
