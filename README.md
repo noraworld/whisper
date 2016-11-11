@@ -72,7 +72,7 @@ The injected [Disqus](https://disqus.com) code is same as the Google Analytics. 
 Replace `example` with your Disqus forum shortname and uncomment this script. If your don't use the Disqus, you can delete it.
 
 ### Ghost API
-This theme uses the [Ghost API](https://api.ghost.org) for the sidebar. If you don't this, your profile is not shown. See `assets/js/sidebar.js` and find the part below.
+This theme uses the [Ghost API](https://api.ghost.org) for the sidebar. If you don't edit this, your profile is not shown. See `assets/js/sidebar.js` and find the part below.
 
 ```javascript
 $.get(ghost.url.api('users/slug/USERNAME')).done(function(data) {
