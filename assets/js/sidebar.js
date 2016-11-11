@@ -1,5 +1,5 @@
 // Profile
-$.get(ghost.url.api('users/slug/nora')).done(function(data) {
+$.get(ghost.url.api('users/slug/USERNAME')).done(function(data) {
   $('.sidebar .sidebar-profile').append('<img class="sidebar-profile-image" src="' + data.users[0].image + '"alt="' + data.users[0].name + '">');
   $('.sidebar .sidebar-profile').append('<h5 class="sidebar-profile-name">' + data.users[0].name + '</h5>');
   $('.sidebar .sidebar-profile').append('<p class="sidebar-profile-bio">' + data.users[0].bio + '</p>');
