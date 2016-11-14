@@ -1,4 +1,6 @@
 # Whisper
+![screenshot](https://github.com/noraworld/whisper/blob/master/assets/img/screenshot_desktop.png)
+
 The customized theme for [Ghost](https://github.com/TryGhost/Ghost).  
 This theme is based on the default Ghost theme, [Casper](https://github.com/TryGhost/Casper).
 
