@@ -6,7 +6,8 @@ $.get(ghost.url.api('users/slug/noraworld')).done(function(data) {
   $('.sidebar .sidebar-profile').append('<p class="sidebar-profile-bio">' + data.users[0].bio + '</p>');
   $('.sidebar .sidebar-profile').fadeIn(1000);
 }).fail(function(err) {
-  console.log(err);
+  console.info('The detailed error is here.');
+  console.info(err);
 });
 
 // Categories
@@ -17,7 +18,8 @@ $.get(ghost.url.api('tags')).done(function(data) {
   }
   $('.sidebar .sidebar-categories').fadeIn(1000);
 }).fail(function(err) {
-  console.log(err);
+  console.info('The detailed error is here');
+  console.info(err);
 });
 
 // Recent Posts
@@ -27,5 +29,6 @@ $.get(ghost.url.api('posts', {limit: 15})).done(function(data) {
   }
   $('.sidebar .sidebar-recent-posts').fadeIn(1000);
 }).fail(function(err) {
-  console.log(err);
+  console.info('The detailed error is here');
+  console.info(err);
 });
