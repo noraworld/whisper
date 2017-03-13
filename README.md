@@ -5,7 +5,7 @@ The customized theme for [Ghost](https://github.com/TryGhost/Ghost).
 This theme is based on the default Ghost theme, [Casper](https://github.com/TryGhost/Casper).
 
 ## Dependencies
-IMPORTANT! If you use this theme, you should edit the following things.
+**IMPORTANT:** If you use this theme, you should edit the following things.
 
 ### SNS links
 See `default.hbs` and find the part below.
@@ -35,59 +35,35 @@ See `default.hbs` and find the part below.
 
 Replace links or anchors with your own things. Append or delete lists if you want or don't want these.
 
-### Google Analytics
-If you want to use the [Google Analytics](https://analytics.google.com), see `default.hbs` and check the part below.
+### Environment variables
+This theme supports the following tools.
 
-```html
-{{!-- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+* Google Analytics
+* Disqus
+* Ghost API
 
-  ga('create', 'UA-XXXXXXXX-X', 'auto');
-  ga('send', 'pageview');
-</script> --}}
-```
-
-Replace `UA-XXXXXXXX-X` with your tracking code and uncomment this script. If you don't need the Google Analytics, you can delete this script.
-
-### Disqus
-The injected [Disqus](https://disqus.com) code is same as the Google Analytics. See `post.hbs` and check the part below.
-
-```html
-{{!-- <section class="comments">
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    var disqus_shortname = 'example';
-    var disqus_identifier = '{{post.id}}';
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section> --}}
-```
-
-Replace `example` with your Disqus forum shortname and uncomment this script. If your don't use the Disqus, you can delete it.
-
-### Ghost API
-This theme uses the [Ghost API](https://api.ghost.org) for the sidebar. If you don't edit this, your profile is not shown. See `assets/js/sidebar.js` and find the part below.
+Create a `env.js` file in `assets/js/` directory, and paste the code below.
 
 ```javascript
-$.get(ghost.url.api('users/slug/USERNAME')).done(function(data) {
-  $('.sidebar .sidebar-profile').append('<img class="sidebar-profile-image" src="' + data.users[0].image + '"alt="' + data.users[0].name + '">');
-  $('.sidebar .sidebar-profile').append('<h5 class="sidebar-profile-name">' + data.users[0].name + '</h5>');
-  $('.sidebar .sidebar-profile').append('<p class="sidebar-profile-bio">' + data.users[0].bio + '</p>');
-  $('.sidebar .sidebar-profile').fadeIn(1000);
-}).fail(function(err) {
-  console.log(err);
-});
+// This is the environment variables for injected JavaScript codes.
+
+// If true, the Google Analytics is enabled
+var isAnalytics = false;
+// Paste your tracking code here (if you use the Google Analytics)
+var trackingCode = 'UA-XXXXXXXX-X';
+
+// If true, the Disqus comment system is enabled
+var isDisqus = false;
+// Paste your Disqus shortname here (if you use the Disqus)
+var disqusUsername = 'example';
+
+// Paste your Ghost slug
+var ghostSlug = 'example';
 ```
 
-Replace `USERNAME` with your Ghost slug (user name).
+Replace the values according to your own environment referring to the comments.
+
+**NOTE:** This file is necessary even if you do not use all of the tools above.
 
 ## License
 All codes of this repository are available under the MIT license. See the [LICENSE](https://github.com/noraworld/whisper/blob/master/LICENSE) for more information.
