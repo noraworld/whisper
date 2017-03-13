@@ -1,5 +1,4 @@
 // Profile
-// NOTE: Replace `noraworld` with your Ghost slug (user name)
 $.get(ghost.url.api('users/slug/' + ghostSlug)).done(function(data) {
   $('.sidebar .sidebar-profile').append('<img class="sidebar-profile-image" src="' + data.users[0].image + '"alt="' + data.users[0].name + '">');
   $('.sidebar .sidebar-profile').append('<h5 class="sidebar-profile-name">' + data.users[0].name + '</h5>');
