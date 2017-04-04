@@ -810,6 +810,10 @@ just for the lolz and stylepoints. */
   transform: translateX(-50%);
 }
 
+img.emoji {
+  vertical-align: text-top;
+}
+
 .footnotes {
   font-style: italic;
   font-size: 1.3rem;
